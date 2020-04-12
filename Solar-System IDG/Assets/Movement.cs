@@ -9,8 +9,9 @@ public class Movement : MonoBehaviour
     public float velocidad;
     public Transform solTans;
     private Vector3 newPos;
-
-    // Update is called once per frame
+    public Vector3 movementPerFrame;
+    Vector3 AuxB = Vector3.zero;
+    Vector3 AuxA;
 
     private void Start()
     {
@@ -18,13 +19,16 @@ public class Movement : MonoBehaviour
     }
     void Update()
     {
+        AuxA = AuxB;
+        AuxB = transform.position;
+        movementPerFrame = new Vector3(AuxB.x - AuxA.x, AuxB.y - AuxA.y, AuxB.z - AuxA.z);
+        
         angulo += Time.deltaTime * velocidad;
-
-        newPos = Vector3.zero;
 
         newPos.x = solTans.position.x + distASol * Mathf.Cos(angulo * Mathf.Deg2Rad);
         newPos.z = solTans.position.z + distASol * Mathf.Sin(angulo * Mathf.Deg2Rad);
-
+        
         transform.position = newPos;
+
     }
 }
