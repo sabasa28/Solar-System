@@ -8,6 +8,7 @@ public class guidedCam : MonoBehaviour
     public GameObject[] planets;
     public Vector3[] planetMovement;
     public Vector3 offset;
+    public float movementSpeed = 1.0f;
     int timeInPlanet = 5;
     int timer = 0;
     int currentPlanet = 0;
@@ -16,7 +17,7 @@ public class guidedCam : MonoBehaviour
     {
         for (int i = 0; i < planetMovement.Length; i++)
         {
-            planetMovement[i] = planets[i].GetComponent<Movement>().movementPerFrame;
+            planetMovement[i] = planets[i].GetComponent<Movement>().movementPerFrame; //necesario?
         }
     }
     void LateUpdate()
@@ -35,7 +36,7 @@ public class guidedCam : MonoBehaviour
 
         transform.position += planetMovement[currentPlanet];
 
-        transform.position = Vector3.Lerp(transform.position,planets[currentPlanet].transform.position+offset, Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, planets[currentPlanet].transform.position + offset, movementSpeed * Time.deltaTime);
 
     }
 

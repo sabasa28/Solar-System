@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 78326752902243462}
   - component: {fileID: 78326752902243461}
   - component: {fileID: 78326752902243460}
-  - component: {fileID: 78326752902243464}
+  - component: {fileID: 2587068290487469217}
   m_Layer: 0
-  m_Name: Jupiter
+  m_Name: Planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,7 +93,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &78326752902243464
+--- !u!114 &2587068290487469217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,9 +102,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 78326752902243459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78bd3bc4dbad0ae448b60c853d9ad5c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c62ebf4bd7ea6541806569128e32c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   distASol: 0
-  velocidad: 40
+  velocidad: 0
   solTans: {fileID: 0}
+  movementPerFrame: {x: 0, y: 0, z: 0}
+  radius: 5
+  rotationSpeed: 10
+  rotationVector: {x: 0, y: 0, z: 0}
