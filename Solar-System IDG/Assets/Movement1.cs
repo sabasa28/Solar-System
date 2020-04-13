@@ -13,14 +13,15 @@ public class Movement1 : MonoBehaviour
     public float radius;
     public float rotationSpeed = 10;
     public Vector3 rotationVector;
+    public Transform ship;
     Vector3 AuxB = Vector3.zero;
     Vector3 AuxA;
-
 
     private void Start()
     {
         distASol = transform.position.z;
         transform.localScale = new Vector3(radius, radius, radius);
+        ship = GameObject.Find("Nave").transform;
     }
     void Update()
     {
@@ -32,9 +33,15 @@ public class Movement1 : MonoBehaviour
         transform.position = newPos;
 
         transform.Rotate(rotationVector * Time.deltaTime * rotationSpeed);
-        
+
+        if (Vector3.Distance(ship.position, transform.position) < 5)
+        { 
+            
+        }
+
         AuxA = AuxB;
         AuxB = transform.position;
         movementPerFrame = new Vector3(AuxB.x - AuxA.x, AuxB.y - AuxA.y, AuxB.z - AuxA.z);
+    
     }
 }
