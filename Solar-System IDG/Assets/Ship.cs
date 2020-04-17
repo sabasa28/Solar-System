@@ -6,6 +6,9 @@ public class Ship : MonoBehaviour
 {
     public float speed = 1;
     public float rotationSpeed = 1;
+    public Vector3 movementPerFrame;
+    Vector3 AuxB = Vector3.zero;
+    Vector3 AuxA;
 
     void Update()
     {
@@ -27,6 +30,10 @@ public class Ship : MonoBehaviour
 
         if (Mathf.Abs(hor) > 0.001f || Mathf.Abs(ver) > 0.001f)
             transform.rotation = finalRotation;
+
+        AuxA = AuxB;
+        AuxB = transform.position;
+        movementPerFrame = new Vector3(AuxB.x - AuxA.x, AuxB.y - AuxA.y, AuxB.z - AuxA.z);
     }
 
     float RealAngle(Vector3 from, Vector3 to)

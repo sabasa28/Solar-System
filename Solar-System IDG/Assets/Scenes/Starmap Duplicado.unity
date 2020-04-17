@@ -167,6 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   rotationSpeed: 10
+  movementPerFrame: {x: 0, y: 0, z: 0}
 --- !u!96 &578538132
 TrailRenderer:
   serializedVersion: 2
@@ -256,7 +257,7 @@ TrailRenderer:
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
-    alignment: 0
+    alignment: 1
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
@@ -458,8 +459,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planets: []
   planetMovement: []
-  offset: {x: 0, y: -30, z: 0}
+  offset: {x: 0, y: 30, z: -15}
   movementSpeed: 1
+  ship: {fileID: 578538129}
 --- !u!1 &1622444186
 GameObject:
   m_ObjectHideFlags: 0
