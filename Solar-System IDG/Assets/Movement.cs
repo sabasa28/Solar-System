@@ -8,8 +8,10 @@ public class Movement : MonoBehaviour
     private float angulo = 90;
     public float velocidad;
     public Transform solTans;
+    public float rotationSpeed = 10;
     private Vector3 newPos;
     public Vector3 movementPerFrame;
+    public Vector3 rotationVector;
     Vector3 AuxB = Vector3.zero;
     Vector3 AuxA;
 
@@ -26,6 +28,8 @@ public class Movement : MonoBehaviour
         newPos.z = solTans.position.z + distASol * Mathf.Sin(angulo * Mathf.Deg2Rad);
         
         transform.position = newPos;
+
+        transform.Rotate(rotationVector * Time.deltaTime * rotationSpeed);
 
         AuxA = AuxB;
         AuxB = transform.position;

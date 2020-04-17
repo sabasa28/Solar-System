@@ -16,15 +16,30 @@ public class Movement1 : MonoBehaviour
     public Transform ship;
     Vector3 AuxB = Vector3.zero;
     Vector3 AuxA;
+    Color originalColor;
+    float DistanceToTransparence = 20.0f;
+    float alpha;
 
     private void Start()
     {
         distASol = transform.position.z;
         transform.localScale = new Vector3(radius, radius, radius);
-        ship = GameObject.Find("Nave").transform;
+        ship = GameObject.Find("NaveMadre").transform;
+        originalColor = GetComponent<Renderer>().material.color;
+
     }
     void Update()
     {
+
+        if (Vector3.Distance(ship.transform.position, transform.position) < DistanceToTransparence)
+        {
+            alpha = Vector3.Distance(ship.transform.position, transform.position) / DistanceToTransparence;
+        }
+        else
+        {
+            alpha = 1.0f;
+        }
+        GetComponent<Renderer>().material.color = new Color(originalColor.r,originalColor.g,originalColor.b,alpha);
         angulo += Time.deltaTime * velocidad;
 
         newPos.x = solTans.position.x + distASol * Mathf.Cos(angulo * Mathf.Deg2Rad);
@@ -33,11 +48,6 @@ public class Movement1 : MonoBehaviour
         transform.position = newPos;
 
         transform.Rotate(rotationVector * Time.deltaTime * rotationSpeed);
-
-        if (Vector3.Distance(ship.position, transform.position) < 5)
-        { 
-            
-        }
 
         AuxA = AuxB;
         AuxB = transform.position;

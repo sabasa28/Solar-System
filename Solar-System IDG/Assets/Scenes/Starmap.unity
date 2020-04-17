@@ -228,7 +228,9 @@ MonoBehaviour:
   distASol: 0
   velocidad: 37
   solTans: {fileID: 1622444190}
+  rotationSpeed: 7
   movementPerFrame: {x: 0, y: 0, z: 0}
+  rotationVector: {x: 1, y: 0, z: 1}
 --- !u!1 &425568122
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +339,9 @@ MonoBehaviour:
   distASol: 0
   velocidad: 2
   solTans: {fileID: 1622444190}
+  rotationSpeed: 6
   movementPerFrame: {x: 0, y: 0, z: 0}
+  rotationVector: {x: 1, y: 1, z: 0}
 --- !u!1 &476580980
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +450,9 @@ MonoBehaviour:
   distASol: 0
   velocidad: 27
   solTans: {fileID: 1622444190}
+  rotationSpeed: 9
   movementPerFrame: {x: 0, y: 0, z: 0}
+  rotationVector: {x: 0, y: 1, z: 1}
 --- !u!1 &485703553
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +561,9 @@ MonoBehaviour:
   distASol: 0
   velocidad: 30
   solTans: {fileID: 1622444190}
+  rotationSpeed: 6
   movementPerFrame: {x: 0, y: 0, z: 0}
+  rotationVector: {x: 1, y: 0, z: 0}
 --- !u!1 &654487378
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +763,9 @@ MonoBehaviour:
   distASol: 0
   velocidad: 22
   solTans: {fileID: 1622444190}
+  rotationSpeed: 8
   movementPerFrame: {x: 0, y: 0, z: 0}
+  rotationVector: {x: 1, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,13 +843,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -150, z: 0}
+  m_LocalRotation: {x: 0.53729963, y: 0, z: 0, w: 0.8433915}
+  m_LocalPosition: {x: 0, y: 110, z: -60}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 65, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,7 +880,8 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
-  offset: {x: 0, y: -30, z: 0}
+  offset: {x: 0, y: 30, z: -15}
+  movementSpeed: 1
 --- !u!1 &1291538832
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,7 +990,9 @@ MonoBehaviour:
   distASol: 0
   velocidad: 24
   solTans: {fileID: 1622444190}
+  rotationSpeed: 7
   movementPerFrame: {x: 0, y: 0, z: 0}
+  rotationVector: {x: 0, y: 0, z: 1}
 --- !u!1 &1603402455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1101,9 @@ MonoBehaviour:
   distASol: 0
   velocidad: 4
   solTans: {fileID: 1622444190}
+  rotationSpeed: 5
   movementPerFrame: {x: 0, y: 0, z: 0}
+  rotationVector: {x: 1, y: 1, z: 1}
 --- !u!1 &1622444186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,4 +1305,6 @@ MonoBehaviour:
   distASol: 0
   velocidad: 40
   solTans: {fileID: 1622444190}
+  rotationSpeed: 10
   movementPerFrame: {x: 0, y: 0, z: 0}
+  rotationVector: {x: 0, y: 1, z: 0}

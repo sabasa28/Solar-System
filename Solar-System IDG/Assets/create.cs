@@ -26,7 +26,7 @@ public class Create : MonoBehaviour
 			
 			go.GetComponent<MeshRenderer>().material = planetMaterials[Random.Range(0, planetMaterials.Count)];
 
-			p.radius = Random.Range(1, 5);
+			p.radius = Random.Range(2, 6);
 
 			p.solTans = gameObject.transform;
 
